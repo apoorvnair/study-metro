@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Study Abroad Webinar – StudyMetro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    .hero {
+      background: #0A2647;
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .btn {
+      background: #FFB703;
+      color: #000;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #ff9900;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .form-section {
+      background: #fff;
+      padding: 40px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .whatsapp {
+      margin-top: 20px;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      font-size: 0.9rem;
+    }
+    #countdown {
+      font-size: 1.8rem;
+      margin-top: 30px;
+      color: #FFB703;
+      background-color: #001F3F;
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    blockquote {
+      font-style: italic;
+      background: #f1f1f1;
+      padding: 15px;
+      border-left: 4px solid #ccc;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>Free Webinar: Study in Germany Without IELTS or GRE</h1>
+    <p>Hosted by <strong>StudyMetro</strong> on <strong>25th July 2025</strong><br>
+    Join our 45-minute live session with experts and get insider tips on applying to German universities!</p>
+    <div id="countdown"></div>
+    <a href="#register" class="btn">Register Now – Limited Seats</a>
+  </div>
+
+  <div class="section">
+    <h2>What You'll Learn</h2>
+    <ul style="text-align:left; max-width: 600px; margin: 20px auto;">
+      <li>✅ How to apply to top universities in Germany</li>
+      <li>✅ Admission without IELTS or GRE</li>
+      <li>✅ Visa process explained clearly</li>
+      <li>✅ Student success stories and funding options</li>
+      <li>✅ Q&A session with study abroad experts</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>What Past Attendees Say</h2>
+    <blockquote>"The webinar gave me clarity about applying in Germany. Highly recommended!" – Priya, Chennai</blockquote>
+    <blockquote>"Clear info about visa and IELTS-free options. Great speakers!" – Aditya, Bangalore</blockquote>
+  </div>
+
+  <div class="section">
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>Do I need IELTS?</strong><br>No, we will show you options without IELTS.</p>
+    <p><strong>Is the webinar free?</strong><br>Yes, completely free.</p>
+    <p><strong>Who should attend?</strong><br>Anyone planning to study in Germany in the next 1–2 years.</p>
+  </div>
+
+  <div class="section form-section" id="register">
+    <h2>Register for the Webinar</h2>
+    <form action="https://formsubmit.co/apoorvnair1112@gmail.com" method="POST">
+      <input type="text" name="Full Name" placeholder="Full Name" required>
+      <input type="email" name="Email" placeholder="Email Address" required>
+      <input type="tel" name="Phone" placeholder="Phone Number" required>
+      <select name="Destination" required>
+        <option value="">Select Destination</option>
+        <option value="Germany">Germany</option>
+        <option value="France">France</option>
+        <option value="UK">UK</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="hidden" name="_subject" value="New Webinar Registration">
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit" class="btn" style="margin-top: 10px;">Submit & Reserve My Spot</button>
+    </form>
+    <div class="whatsapp">
+      <p>📱 Or message us on WhatsApp for details:<br>
+      <a href="https://wa.me/4917665986055" class="btn" target="_blank">Chat on WhatsApp</a></p>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 StudyMetro. All rights reserved.
+  </div>
+
+  <script>
+    const countdown = () => {
+      const countDate = new Date("Jul 25, 2025 18:00:00").getTime();
+      const now = new Date().getTime();
+      const gap = countDate - now;
+
+      const second = 1000;
+      const minute = second * 60;
+      const hour = minute * 60;
+      const day = hour * 24;
+
+      const textDay = Math.floor(gap / day);
+      const textHour = Math.floor((gap % day) / hour);
+      const textMinute = Math.floor((gap % hour) / minute);
+      const textSecond = Math.floor((gap % minute) / second);
+
+      document.getElementById('countdown').innerText = 
+        `⏳ ${textDay}d ${textHour}h ${textMinute}m ${textSecond}s left`;
+    };
+
+    countdown();
+    setInterval(countdown, 1000);
+  </script>
+
+</body>
+</html>
